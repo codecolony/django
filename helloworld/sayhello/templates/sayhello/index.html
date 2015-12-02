@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+
+{% if latest_name_list %}
+    <ul>
+    {% for name in latest_name_list %}
+        <li><a href="/sayhello/{{ name.person_name }}/">{{ name.person_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No names are available.</p>
+{% endif %}
+
+</body>
+</html>
